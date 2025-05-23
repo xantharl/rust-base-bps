@@ -8,13 +8,21 @@ import { NavBarComponent } from './nav-bar.component';
   imports: [RouterOutlet, NavBarComponent],
   template: `
     <app-nav-bar [title]="title"></app-nav-bar>
-    <router-outlet></router-outlet>
+    <main class="main-content">
+      <router-outlet></router-outlet>
+    </main>
   `,
   styles: [`
     :host {
       display: block;
       min-height: 100vh;
-      background-color: #f0f2f5;
+      background-color: var(--bg-primary);
+    }
+
+    .main-content {
+      min-height: calc(100vh - 4rem);
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
     }
   `]
 })

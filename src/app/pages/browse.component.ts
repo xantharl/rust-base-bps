@@ -34,7 +34,7 @@ interface BlueprintTile {
     }
 
     h1 {
-      color: #1a73e8;
+      color: var(--text-primary);
       margin-bottom: 2rem;
       text-align: center;
     }
@@ -50,17 +50,18 @@ interface BlueprintTile {
 
     .blueprint-tile {
       aspect-ratio: 1;
-      background: #f8f9fa;
-      border: 2px solid #1a73e8;
+      background: var(--bg-secondary);
+      border: 2px solid var(--border-color);
       border-radius: 8px;
       overflow: hidden;
-      transition: transform 0.2s, box-shadow 0.2s;
+      transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
       cursor: pointer;
     }
 
     .blueprint-tile:hover {
       transform: translateY(-4px);
-      box-shadow: 0 4px 12px rgba(26, 115, 232, 0.2);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+      border-color: var(--accent-primary);
     }
 
     .tile-content {
@@ -72,7 +73,7 @@ interface BlueprintTile {
     .blueprint-image {
       flex: 1;
       overflow: hidden;
-      background: #e8f0fe;
+      background: var(--bg-tertiary);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -83,16 +84,17 @@ interface BlueprintTile {
       width: 100%;
       height: 100%;
       object-fit: contain;
+      filter: brightness(0.9) contrast(1.1);
     }
 
     h3 {
       margin: 0;
       padding: 1rem;
       text-align: center;
-      background: white;
-      color: #1a73e8;
+      background: var(--bg-secondary);
+      color: var(--text-primary);
       font-size: 1rem;
-      border-top: 1px solid #e8f0fe;
+      border-top: 1px solid var(--border-color);
     }
 
     @media (max-width: 1400px) {
